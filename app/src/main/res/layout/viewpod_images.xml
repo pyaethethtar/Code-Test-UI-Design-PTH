@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvImages"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/viewholder_image"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btnSeeAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_see_all"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_regular"
+        android:fontFamily="@font/essc_regular"
+        android:paddingVertical="@dimen/margin_medium"
+        android:paddingHorizontal="@dimen/margin_medium_2"
+        android:background="@color/transparentblack"
+        android:layout_marginEnd="@dimen/margin_medium_3"
+        app:layout_constraintTop_toBottomOf="@id/rvImages"
+        app:layout_constraintBottom_toBottomOf="@id/rvImages"
+        app:layout_constraintEnd_toEndOf="@id/rvImages"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

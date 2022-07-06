@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dotted_line"
+    android:layout_marginBottom="@dimen/margin_medium_3">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_voucher_rate"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_regular"
+        android:textAllCaps="true"
+        android:fontFamily="@font/essc_semi_bold"
+        android:layout_marginStart="@dimen/margin_medium_3"
+        android:layout_marginTop="@dimen/margin_medium_3"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/nextred"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@id/tvRate"
+        android:layout_marginEnd="@dimen/margin_medium_3"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvVoucherName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_voucher_name"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_regular_3x"
+        android:fontFamily="@font/essc_bold"
+        android:layout_below="@id/tvRate"
+        android:layout_alignStart="@id/tvRate"
+        />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/layoutPromotion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvVoucherName"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:paddingHorizontal="@dimen/margin_medium_3"
+        android:weightSum="3">
+
+        <RelativeLayout
+            android:id="@+id/layoutBreakfast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivFnB"
+                android:layout_width="@dimen/margin_xxlarge"
+                android:layout_height="@dimen/margin_xxlarge"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/fnb" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/text_regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivFnB"
+                android:layout_centerHorizontal="true"
+                android:text="@string/tv_breakfast" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutDiscount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivDiscount"
+                android:layout_width="@dimen/margin_xxlarge"
+                android:layout_height="@dimen/margin_xxlarge"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/discount" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/text_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivDiscount"
+                android:layout_centerHorizontal="true"
+                android:text="@string/tv_discount" />
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnViewRates"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/margin_medium_1"
+            android:layout_weight="1"
+            android:background="@drawable/bg_pink_stroke"
+            android:fontFamily="@font/essc_semi_bold"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/margin_medium_2"
+            android:text="@string/btn_view_rates"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_regular_2x" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/layoutPromotion"
+        android:layout_marginVertical="@dimen/margin_medium_3"
+        android:background="@color/label_gray" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPriceDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginStart="@dimen/margin_medium_3"
+        android:fontFamily="@font/essc_semi_bold"
+        android:text="Avg. Nightly / Room From"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_regular_2x" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tvDescription"
+        android:layout_alignParentEnd="true"
+        android:fontFamily="@font/essc_bold"
+        android:text="161.42"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_heading_1x"
+        android:layout_marginEnd="@dimen/margin_medium_3"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPriceUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tvPrice"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:layout_toStartOf="@id/tvPrice"
+        android:fontFamily="@font/essc_semi_bold"
+        android:text="SGD"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_regular_2x" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvPriceDescription"
+        android:layout_alignStart="@id/tvPriceDescription"
+        android:fontFamily="@font/essc_regular"
+        android:text="Subject to GST &amp; Service Charge"
+        android:textColor="@color/color_gray"
+        android:textSize="@dimen/text_regular" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMemberDeal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_below="@id/tvDescription"
+        android:layout_marginTop="@dimen/margin_medium_3"
+        android:background="@color/color_button"
+        android:fontFamily="@font/essc_bold"
+        android:gravity="center"
+        android:text="members deals"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_regular_2x" />
+
+
+</RelativeLayout>

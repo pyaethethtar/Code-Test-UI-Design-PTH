@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">UIDesignTest</string>
+    <string name="option_amentities">Amentities</string>
+    <string name="option_facilities">Facilities</string>
+    <string name="option_fnb"><![CDATA[F&amp;B]]></string>
+    <string name="option_kidsfamily">Kids/Family</string>
+    <string name="option_wellness">Wellness</string>
+    <string name="btn_see_all">See all 2/68</string>
+    <string name="btn_by_room">By Room</string>
+    <string name="btn_by_rate">By Rates</string>
+    <string name="btn_view_rates">View Rates</string>
+    <string name="tv_voucher_rate">Your E-Voucher Rate</string>
+    <string name="tv_voucher_name">Mobile App Special Voucher</string>
+    <string name="tv_breakfast">Inclusive of Breakfast</string>
+    <string name="tv_discount">20% off In-Room Service</string>
+</resources>

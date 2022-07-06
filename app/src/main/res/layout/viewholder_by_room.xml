@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivByRoom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_large_image"
+        android:scaleType="fitXY"
+        android:src="@drawable/beach" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Deluxe Twin"
+        android:textSize="@dimen/text_heading_1x"
+        android:textColor="@color/black"
+        android:fontFamily="@font/essc_bold"
+        android:layout_marginTop="@dimen/margin_medium_1"
+        android:layout_below="@id/ivByRoom"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Twin Single Beds, Cable TV, Free Wifi"
+        android:textSize="@dimen/text_regular"
+        android:textColor="@color/black"
+        android:fontFamily="@font/essc_light"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_below="@id/tvName"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btnViewRates"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_height"
+        android:layout_alignTop="@id/tvName"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/margin_small"
+        android:background="@drawable/bg_pink_stroke"
+        android:fontFamily="@font/essc_semi_bold"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/margin_medium_2"
+        android:text="@string/btn_view_rates"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text_regular_2x" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPriceDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Avg. Nightly / Room From"
+        android:textSize="@dimen/text_regular_2x"
+        android:textColor="@color/black"
+        android:fontFamily="@font/essc_semi_bold"
+        android:layout_below="@id/tvDescription"
+        android:layout_marginTop="@dimen/margin_large"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="161.42"
+        android:textSize="@dimen/text_heading_1x"
+        android:textColor="@color/black"
+        android:fontFamily="@font/essc_bold"
+        android:layout_alignBottom="@id/tvPriceDescription"
+        android:layout_alignParentEnd="true"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPriceUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SGD"
+        android:textSize="@dimen/text_regular_2x"
+        android:textColor="@color/black"
+        android:fontFamily="@font/essc_semi_bold"
+        android:layout_alignTop="@id/tvPriceDescription"
+        android:layout_toStartOf="@id/tvPrice"
+        android:layout_marginEnd="@dimen/margin_medium"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/tvPrice"
+        android:layout_marginVertical="@dimen/margin_medium_3"
+        android:background="@color/label_gray" />
+
+</RelativeLayout>
