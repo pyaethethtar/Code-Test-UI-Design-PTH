@@ -3,17 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Projects/UIDesignTest/app/src/main/res/drawable/bg_blue_stroke.xml" value="0.1" />
-        <entry key="..\:/Projects/UIDesignTest/app/src/main/res/drawable/bg_dotted_line.xml" value="0.1" />
+        <entry key="..\:/Projects/UIDesignTest/app/src/main/res/drawable/bg_blue_stroke.xml" value="0.2" />
+        <entry key="..\:/Projects/UIDesignTest/app/src/main/res/drawable/bg_dotted_line.xml" value="0.2" />
         <entry key="..\:/Projects/UIDesignTest/app/src/main/res/drawable/bg_pink_stroke.xml" value="0.1" />
-        <entry key="..\:/Projects/UIDesignTest/app/src/main/res/layout/activity_main.xml" value="0.176" />
+        <entry key="..\:/Projects/UIDesignTest/app/src/main/res/drawable/parallel.xml" value="0.134" />
+        <entry key="..\:/Projects/UIDesignTest/app/src/main/res/layout/activity_main.xml" value="0.4" />
         <entry key="..\:/Projects/UIDesignTest/app/src/main/res/layout/viewholder_by_rate.xml" value="0.4" />
         <entry key="..\:/Projects/UIDesignTest/app/src/main/res/layout/viewholder_by_room.xml" value="0.264" />
         <entry key="..\:/Projects/UIDesignTest/app/src/main/res/layout/viewholder_image.xml" value="0.1234375" />
         <entry key="..\:/Projects/UIDesignTest/app/src/main/res/layout/viewpod_by_rate.xml" value="0.2" />
         <entry key="..\:/Projects/UIDesignTest/app/src/main/res/layout/viewpod_by_rates.xml" value="0.2" />
         <entry key="..\:/Projects/UIDesignTest/app/src/main/res/layout/viewpod_by_room.xml" value="0.2" />
-        <entry key="..\:/Projects/UIDesignTest/app/src/main/res/layout/viewpod_images.xml" value="0.536" />
+        <entry key="..\:/Projects/UIDesignTest/app/src/main/res/layout/viewpod_images.xml" value="0.12" />
         <entry key="..\:/Projects/UIDesignTest/app/src/main/res/layout/viewpod_options.xml" value="0.6" />
       </map>
     </option>

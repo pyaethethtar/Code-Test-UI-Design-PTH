@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:paddingTop="@dimen/margin_medium_3"
+    android:paddingTop="@dimen/margin_large"
     android:background="@color/white">
 
     <RelativeLayout
@@ -43,13 +43,13 @@
             android:id="@+id/tvTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Furama Riverfront, Singapore"
-            android:textSize="@dimen/text_heading_2x"
-            android:textColor="@color/black"
-            android:fontFamily="@font/essc_extra_bold"
-            android:layout_marginTop="@dimen/margin_medium_3"
+            android:layout_below="@id/btnBack"
             android:layout_marginHorizontal="@dimen/margin_medium_3"
-            android:layout_below="@id/btnBack"/>
+            android:layout_marginTop="@dimen/margin_medium_3"
+            android:fontFamily="@font/essc_extra_bold"
+            android:text="Furama Riverfront, Singapore"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_heading_2x" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/btnNext"
@@ -82,20 +82,44 @@
             android:layout_alignParentEnd="true"
             android:layout_alignBottom="@id/tvAddress"/>
 
-        <include
-            android:id="@+id/vpImages"
-            layout="@layout/viewpod_images"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutImages"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/tvAddress"
-            android:layout_marginTop="@dimen/margin_medium_3" />
+            android:layout_marginTop="@dimen/margin_medium_3">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvImages"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:listitem="@layout/viewholder_image"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnSeeAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_see_all"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_regular"
+                android:fontFamily="@font/essc_regular"
+                android:paddingVertical="@dimen/margin_medium"
+                android:paddingHorizontal="@dimen/margin_medium_2"
+                android:background="@color/transparentblack"
+                android:layout_marginEnd="@dimen/margin_medium_3"
+                app:layout_constraintTop_toBottomOf="@id/rvImages"
+                app:layout_constraintBottom_toBottomOf="@id/rvImages"
+                app:layout_constraintEnd_toEndOf="@id/rvImages"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <include
             android:id="@+id/vpOptions"
             layout="@layout/viewpod_options"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/vpImages"
+            android:layout_below="@id/layoutImages"
             android:layout_marginTop="@dimen/margin_medium_3" />
 
         <androidx.appcompat.widget.LinearLayoutCompat
@@ -103,10 +127,11 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/margin_xxlarge"
             android:layout_below="@id/vpOptions"
-            android:layout_marginStart="@dimen/margin_medium_3"
-            android:layout_marginTop="@dimen/margin_medium_3"
-            android:layout_marginEnd="@dimen/margin_medium_3"
-            android:layout_marginBottom="@dimen/margin_medium_3"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_marginEnd="@dimen/margin_large"
+            android:layout_marginBottom="@dimen/margin_large"
+            android:padding="1dp"
             android:background="@drawable/bg_blue_stroke"
             android:orientation="horizontal"
             android:weightSum="2">
@@ -116,6 +141,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:background="@color/colorAccent"
                 android:fontFamily="@font/essc_semi_bold"
                 android:gravity="center"
                 android:text="@string/btn_by_room"
@@ -134,11 +160,24 @@
                 android:textSize="@dimen/text_regular_2x" />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
-        <FrameLayout
-            android:id="@+id/flContainer"
+        <include
+            android:id="@+id/vpByRoom"
+            layout="@layout/viewpod_by_room"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/margin_medium_3"/>
+            android:layout_below="@id/layoutRoomRates"
+            android:layout_marginHorizontal="@dimen/margin_medium_3"
+            android:visibility="visible"/>
+
+        <include
+            android:id="@+id/vpByRate"
+            layout="@layout/viewpod_by_rate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layoutRoomRates"
+            android:layout_marginHorizontal="@dimen/margin_medium_3"
+            android:visibility="gone"/>
+
 
     </RelativeLayout>
 

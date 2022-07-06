@@ -97,7 +97,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/button_height"
             android:layout_gravity="center_vertical"
-            android:layout_marginStart="@dimen/margin_medium_1"
+            android:layout_marginStart="@dimen/margin_small"
             android:layout_weight="1"
             android:background="@drawable/bg_pink_stroke"
             android:fontFamily="@font/essc_semi_bold"
@@ -113,7 +113,7 @@
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:layout_below="@id/layoutPromotion"
-        android:layout_marginVertical="@dimen/margin_medium_3"
+        android:layout_margin="@dimen/margin_medium_3"
         android:background="@color/label_gray" />
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -166,7 +166,7 @@
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvMemberDeal"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/button_height"
+        android:layout_height="@dimen/margin_xxlarge"
         android:layout_below="@id/tvDescription"
         android:layout_marginTop="@dimen/margin_medium_3"
         android:background="@color/color_button"
@@ -175,7 +175,9 @@
         android:text="members deals"
         android:textAllCaps="true"
         android:textColor="@color/black"
-        android:textSize="@dimen/text_regular_2x" />
+        android:textSize="@dimen/text_regular_2x"
+        android:layout_marginHorizontal="1dp"
+        android:layout_marginBottom="1dp"/>
 
 
 </RelativeLayout>

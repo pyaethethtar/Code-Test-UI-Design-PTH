@@ -50,14 +50,14 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvPriceDescription"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Avg. Nightly / Room From"
-        android:textSize="@dimen/text_regular_2x"
-        android:textColor="@color/black"
-        android:fontFamily="@font/essc_semi_bold"
         android:layout_below="@id/tvDescription"
-        android:layout_marginTop="@dimen/margin_large"/>
+        android:layout_marginTop="@dimen/margin_large"
+        android:fontFamily="@font/essc_semi_bold"
+        android:text="Avg. Nightly / Room From"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_regular" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvPrice"
@@ -75,7 +75,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SGD"
-        android:textSize="@dimen/text_regular_2x"
+        android:textSize="@dimen/text_regular"
         android:textColor="@color/black"
         android:fontFamily="@font/essc_semi_bold"
         android:layout_alignTop="@id/tvPriceDescription"
